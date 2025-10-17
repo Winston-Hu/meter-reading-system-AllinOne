@@ -1,0 +1,72 @@
+{
+    "deduplicationId": "cf0f6269-6e14-4db9-ba9e-104a6400233f",
+    "time": "2025-10-16T23:41:04.371880603+00:00",
+    "deviceInfo": {
+        "tenantId": "ef1a5c40-71c8-47bf-a2dd-c2e7b45f936c",
+        "tenantName": "JDK",
+        "applicationId": "80d9ad5e-d53a-4bed-a6b9-4d69e11feb3f",
+        "applicationName": "AQM_TEST_APPLICATION",
+        "deviceProfileId": "0bb23545-5c93-4f4f-bc4a-bff0763598ae",
+        "deviceProfileName": "AquaSense_Test_v2",
+        "deviceName": "AQM_30026415",
+        "devEui": "cacbb80330026415",
+        "deviceClassEnabled": "CLASS_C",
+        "tags": {}
+    },
+    "devAddr": "00578a22",
+    "adr": true,
+    "dr": 5,
+    "fCnt": 3855,
+    "fPort": 1,
+    "confirmed": false,
+    "data": "AH9EIRMUAOYAAALcAAAAAAAAAAAAAAAA",
+    "object": {
+        "sta": "10100",
+        "temperature": 23,
+        "pulse": [
+            732,
+            0,
+            0,
+            0
+        ],
+        "motor2": 0,
+        "cover": 1,
+        "leak": 0,
+        "res": 68,
+        "battery": 31,
+        "cfg1": 1,
+        "cfg2": 0,
+        "motor1": 0,
+        "err": 0
+    },
+    "rxInfo": [
+        {
+            "gatewayId": "40d63cfffe8511e5",
+            "uplinkId": 36213,
+            "nsTime": "2025-10-16T23:41:04.164487340+00:00",
+            "rssi": -82,
+            "snr": 13.5,
+            "channel": 1,
+            "location": {
+                "latitude": -33.880496900556594,
+                "longitude": 151.0242531288249
+            },
+            "context": "mCX45Q==",
+            "metadata": {
+                "region_config_id": "au915_0",
+                "region_common_name": "AU915"
+            },
+            "crcStatus": "CRC_OK"
+        }
+    ],
+    "txInfo": {
+        "frequency": 915400000,
+        "modulation": {
+            "lora": {
+                "bandwidth": 125000,
+                "spreadingFactor": 7,
+                "codeRate": "CR_4_5"
+            }
+        }
+    }
+}

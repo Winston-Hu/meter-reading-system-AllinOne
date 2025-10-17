@@ -1,0 +1,6 @@
+postgres:
+  dbname: metersmart
+  user: admin
+  password: 3.1415926Pi
+  host: 10.166.179.37
+  port: 5432

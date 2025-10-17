@@ -1,0 +1,7 @@
+# Map ChirpStack deviceProfileName -> parser module file (without ".py")
+# The module must exist under: apps/utils/parsers/<module>.py
+profiles:
+  HRI485_with_pulse_counter: hri485_pulse
+  AquaSense_Test_v2: aquasense_v2
+  # Add more here:
+  # New_Profile_Name in ChirpStack: my_custom_parser(python module name)

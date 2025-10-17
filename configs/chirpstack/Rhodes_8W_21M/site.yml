@@ -1,0 +1,15 @@
+# ChirpStack MQTT connection configuration for this site
+
+# The MQTT broker hostname or IP address (for example your ChirpStack server)
+broker_host: chirpstack.jdktech.com.au
+
+# MQTT port number for TLS connections (default: 8883)
+broker_port: 8883
+
+# List of topics to subscribe to
+topics:
+  # ChirpStack uplink messages (device data)
+  - "application/2dbec3b3-bbc6-4674-bcc1-ef423041dad0/device/#"
+
+# Unique client ID for this site (must not collide with others)
+client_id: "Rhodes_8W_21M_client"
