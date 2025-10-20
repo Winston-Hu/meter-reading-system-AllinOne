@@ -20,6 +20,8 @@ import sys
 import csv
 import psycopg2
 
+from apps.utils.db_connect import get_connection  # your existing connection factory
+
 # --------- Adjust here if needed ----------
 REPO_ROOT = Path(__file__).resolve().parents[2]
 BASE_DIR  = (REPO_ROOT / "configs" / "chirpstack").resolve()
@@ -28,7 +30,6 @@ TABLE_NAME = "meter_serial_mapping"
 # -----------------------------------------
 
 sys.path.append(str(REPO_ROOT))
-from apps.utils.db_connect import get_connection  # your existing connection factory
 
 
 def site_to_schema(site_label: str) -> str:
