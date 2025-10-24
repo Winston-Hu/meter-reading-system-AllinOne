@@ -3,6 +3,19 @@ import threading
 from typing import List, Callable, Optional
 import paho.mqtt.client as mqtt
 from pathlib import Path
+import logging
+
+from logs.logging_setup import get_logger
+
+
+LOG = get_logger(
+    "catch_mqtt",
+    file_name="utils.log",
+    max_bytes=5 * 1024 * 1024,
+    backup_count=5,
+    level=logging.INFO,
+    also_console=True
+)
 
 
 OnMsg = Callable[[str, str, bytes], None]  # (site_name, topic, payload)
@@ -94,18 +107,18 @@ class MqttSiteClient:
     # ------ paho callbacks ------
 
     def _on_connect(self, client, userdata, flags, rc):
-        print(f"[{self.site_name}] connected rc={rc}")
+        LOG.info(f"[{self.site_name}] connected rc={rc}")
         if rc == 0:
             for t in self.topics:
                 client.subscribe(t, qos=0)
-                print(f"[{self.site_name}] subscribed: {t}")
+                LOG.info(f"[{self.site_name}] subscribed: {t}")
 
     def _on_message(self, client, userdata, msg):
         # forward to external handler
         try:
             self.on_message_cb(self.site_name, msg.topic, msg.payload)
         except Exception as e:
-            print(f"[{self.site_name}] on_message error: {e}")
+            LOG.exception(f"[{self.site_name}] on_message error: {e}")
 
     def _on_disconnect(self, client, userdata, rc):
-        print(f"[{self.site_name}] disconnected rc={rc}")
+        LOG.info(f"[{self.site_name}] disconnected rc={rc}")

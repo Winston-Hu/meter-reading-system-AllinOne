@@ -27,6 +27,19 @@ import yaml
 from pathlib import Path
 import psycopg2
 from contextlib import contextmanager
+import logging
+
+from logs.logging_setup import get_logger
+
+
+LOG = get_logger(
+    "db_pool",
+    file_name="utils.log",
+    max_bytes=5 * 1024 * 1024,
+    backup_count=5,
+    level=logging.INFO,
+    also_console=True
+)
 
 
 def load_db_config(config_path=None):
@@ -68,7 +81,7 @@ class PostgresConnectionPool:
             host=cfg["host"],
             port=cfg["port"],
         )
-        print(f"Connection pool created: {minconn}–{maxconn} connections.")
+        LOG.info(f"Connection pool created: {minconn}–{maxconn} connections.")
         return cls._pool
 
     @classmethod
@@ -95,7 +108,7 @@ class PostgresConnectionPool:
         """Close all pooled connections."""
         if cls._pool:
             cls._pool.closeall()
-            print("🧹 All pooled connections closed.")
+            LOG.info("All pooled connections closed.")
 
 
 # Quick test

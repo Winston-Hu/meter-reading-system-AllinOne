@@ -1,4 +1,5 @@
 import json
+import logging
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -6,9 +7,18 @@ from apps.utils.catch_siteWatcher import SiteWatcher
 from apps.utils.catch_parserWatcher import DynamicParserManager
 from apps.utils.db_pool import PostgresConnectionPool
 from apps.utils.db_writer import initialize_parent, ingest_rows
-
+from logs.logging_setup import get_logger
 
 PM: DynamicParserManager  # global manager instance
+
+LOG = get_logger(
+    "catch_and_dump",
+    file_name="catch_and_dump.log",
+    max_bytes=5 * 1024 * 1024,
+    backup_count=5,
+    level=logging.INFO,
+    also_console=True
+)
 
 
 def handle_raw(site_name: str, topic: str, payload: bytes):
@@ -16,35 +26,38 @@ def handle_raw(site_name: str, topic: str, payload: bytes):
     try:
         data: Dict[str, Any] = json.loads(payload.decode("utf-8"))
     except Exception as e:
-        print(f"[{site_name}] JSON decode error: {e}")
+        LOG.warning(f"[{site_name}] JSON decode error: {e}")
         return
 
     profile_name = data.get("deviceInfo", {}).get("deviceProfileName")
     if not profile_name:
-        print(f"[{site_name}] missing deviceProfileName; skip")
+        LOG.warning(f"[{site_name}] missing deviceProfileName; skip")
         return
 
     parser = PM.get_parser(profile_name)
     if not parser:
-        print(f"[{site_name}] profile '{profile_name}' not configured or parser missing; skip")
+        LOG.warning(f"[{site_name}] profile '{profile_name}' not configured or parser missing; skip")
         return
 
     try:
         rows: List[Dict[str, Any]] = parser(data, site_name.lower())
+        if not rows:
+            LOG.warning("Empty rows! - maybe null in pulses")
 
-        print(f"\n[{site_name}] profile={profile_name} rows={len(rows)}")
-        for r in rows[:5]:
-            print("  ->", r)
-        if len(rows) > 3:
-            print(f"  ... and {len(rows) - 5} more rows")
+        else:
+            LOG.info(f"\n[{site_name}] profile={profile_name} rows={len(rows)}")
+            for r in rows[:3]:
+                LOG.info(f"  -> {r}\n")
+            if len(rows) > 5:
+                LOG.info(f"  ... and {len(rows) - 3} more rows")
 
-        # write to Postgres (partitioned)
-        inserted = ingest_rows(rows)
-        if inserted:
-            print(f"[{site_name}] inserted {inserted} row(s) into all_meter_data.meter_events")
+            # write to Postgres (partitioned)
+            inserted = ingest_rows(rows)
+            if inserted:
+                LOG.info(f"[{site_name}] inserted {inserted} row(s) into all_meter_data.meter_events")
 
     except Exception as e:
-            print(f"[{site_name}] parser error for '{profile_name}': {e}")
+        LOG.exception(f"[{site_name}] parser error for '{profile_name}': {e}")
 
 
 def main():

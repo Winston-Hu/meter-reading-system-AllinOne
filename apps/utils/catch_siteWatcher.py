@@ -4,10 +4,21 @@ from pathlib import Path
 from typing import Dict, List, Optional, Callable
 import time
 import yaml
+import logging
 
 from .catch_mqtt import MqttSiteClient, OnMsg
+from logs.logging_setup import get_logger
 
 REQUIRED_FILES = ("ca.pem", "cert.pem", "key.pem")
+
+LOG = get_logger(
+    "catch_siteWatcher",
+    file_name="utils.log",
+    max_bytes=5 * 1024 * 1024,
+    backup_count=5,
+    level=logging.INFO,
+    also_console=True
+)
 
 
 def has_required_files(p: Path) -> bool:
@@ -37,7 +48,7 @@ class SiteWatcher:
         self.interval = interval
         self.on_message = on_message or (lambda s, t, p: None)
         self.clients: Dict[str, MqttSiteClient] = {}
-        print(f"[watcher] root={self.root} interval={self.interval}s")
+        LOG.info(f"[watcher] root={self.root} interval={self.interval}s")
 
     def scan_once(self):
         # discover current site dirs
@@ -59,9 +70,9 @@ class SiteWatcher:
                     )
                     cli.start()
                     self.clients[name] = cli
-                    print(f"[watcher] started site: {name}")
+                    LOG.info(f"[watcher] started site: {name}")
                 else:
-                    print(f"[watcher] skip '{name}': missing TLS files {REQUIRED_FILES}")
+                    LOG.warning(f"[watcher] skip '{name}': missing TLS files {REQUIRED_FILES}")
 
         # stop removed sites
         to_stop = [n for n in self.clients.keys() if n not in current]
@@ -70,12 +81,12 @@ class SiteWatcher:
                 self.clients[n].stop()
             finally:
                 self.clients.pop(n, None)
-                print(f"[watcher] removed site: {n}")
+                LOG.info(f"[watcher] removed site: {n}")
 
     def run_forever(self):
         while True:
             try:
                 self.scan_once()
             except Exception as e:
-                print(f"[watcher] scan error: {e}")
+                LOG.exception(f"[watcher] scan error: {e}")
             time.sleep(self.interval)

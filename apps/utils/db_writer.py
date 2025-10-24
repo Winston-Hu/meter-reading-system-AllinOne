@@ -6,8 +6,19 @@ from datetime import datetime, timezone
 from collections import defaultdict
 from psycopg2 import sql
 from psycopg2.extras import execute_values
+import logging
 
 from apps.utils.db_pool import PostgresConnectionPool
+from logs.logging_setup import get_logger
+
+LOG = get_logger(
+    "db_writer",
+    file_name="utils.log",
+    max_bytes=5 * 1024 * 1024,
+    backup_count=5,
+    level=logging.INFO,
+    also_console=True
+)
 
 SCHEMA = "all_meter_data"
 PARENT_TABLE = "meter_events"
@@ -103,7 +114,7 @@ def initialize_parent() -> None:
     with PostgresConnectionPool.get_conn() as conn, conn.cursor() as cur:
         cur.execute(DDL_PARENT)
         conn.commit()
-    print(f"ensured parent table {SCHEMA}.{PARENT_TABLE}")
+    logging.info(f"ensured parent table {SCHEMA}.{PARENT_TABLE}")
 
 
 def ensure_month_partition(year: int, month: int) -> None:
@@ -129,7 +140,7 @@ def ensure_month_partition(year: int, month: int) -> None:
                 parent=sql.Identifier(PARENT_TABLE),
             )
             cur.execute(create_sql, (start, end))
-            print(f"📦 created partition {SCHEMA}.{child} [{start} ~ {end})")
+            LOG.info(f"created partition {SCHEMA}.{child} [{start} ~ {end})")
 
         idx_name = f"{child}_idx_devnode_ts"
         idx_sql = sql.SQL(

@@ -79,9 +79,10 @@ Example Workflow
 from typing import Optional, Dict, Any, Tuple
 from psycopg2 import sql
 import time
+import logging
 
 from apps.utils.db_pool import PostgresConnectionPool
-
+from logs.logging_setup import get_logger
 
 HIT_TTL_SEC = 65
 MISS_TTL_SEC = 30
@@ -90,6 +91,15 @@ MISS_TTL_SEC = 30
 _CACHE: Dict[Tuple[str, str, int], Dict[str, Optional[str]]] = {}
 
 DEBUG = True
+
+LOG = get_logger(
+    "catch_mappingLookup",
+    file_name="utils.log",
+    max_bytes=5 * 1024 * 1024,
+    backup_count=5,
+    level=logging.INFO,
+    also_console=True
+)
 
 
 def fill_from_mapping(row: Dict[str, Any]) -> None:
@@ -107,7 +117,7 @@ def fill_from_mapping(row: Dict[str, Any]) -> None:
 
     if not schema or not dev_eui or ch is None:
         if DEBUG:
-            print(f"[mapping] missing key(s): schema={schema} dev_eui={dev_eui} ch={ch}")
+            LOG.warning(f"[mapping] missing key(s): schema={schema} dev_eui={dev_eui} ch={ch}")
         return
 
     key = (schema, dev_eui.upper(), int(ch))
@@ -117,7 +127,7 @@ def fill_from_mapping(row: Dict[str, Any]) -> None:
         _CACHE[key] = data
 
     if DEBUG and all(v is None for v in data.values()):
-        print(f"[mapping] MISS schema={schema} dev_eui={dev_eui} ch={ch}")
+        LOG.warning(f"[mapping] MISS schema={schema} dev_eui={dev_eui} ch={ch}")
 
     # ---- get mapping with TTL cache ----
     data = _get_mapping_with_cache(schema, dev_eui, int(ch))
@@ -168,9 +178,9 @@ def _get_mapping_with_cache(schema: str, dev_eui: str, channel: int) -> Dict[str
     # Logging
     if DEBUG:
         if any(data.values()):
-            print(f"[mapping] HIT schema={schema} dev_eui={dev_eui} ch={channel}")
+            LOG.info(f"[mapping] HIT schema={schema} dev_eui={dev_eui} ch={channel}")
         else:
-            print(f"[mapping] MISS schema={schema} dev_eui={dev_eui} ch={channel}")
+            LOG.info(f"[mapping] MISS schema={schema} dev_eui={dev_eui} ch={channel}")
 
     return data
 
@@ -198,7 +208,7 @@ def _query_mapping(schema: str, dev_eui: str, channel: int) -> Dict[str, Optiona
             r = cur.fetchone()
     except Exception as e:
         if DEBUG:
-            print(f"[mapping] SQL error schema={schema} dev_eui={dev_eui} ch={channel}: {e}")
+            LOG.exception(f"[mapping] SQL error schema={schema} dev_eui={dev_eui} ch={channel}: {e}")
         r = None
 
     if not r:

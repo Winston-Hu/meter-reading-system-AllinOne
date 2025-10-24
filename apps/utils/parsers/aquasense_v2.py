@@ -2,8 +2,20 @@
 from typing import Dict, Any, List
 from datetime import datetime
 import uuid
+import logging
 
 from apps.utils.catch_mappingLookup import fill_from_mapping
+from logs.logging_setup import get_logger
+
+
+LOG = get_logger(
+    "aquasense_v2",
+    file_name="parsers.log",
+    max_bytes=5 * 1024 * 1024,
+    backup_count=5,
+    level=logging.INFO,
+    also_console=True
+)
 
 
 def _parse_ts(ts_str: str) -> datetime:
@@ -48,6 +60,11 @@ def parse(payload: Dict[str, Any], site_name: str) -> List[Dict[str, Any]]:
         obj.get("pulse", [0, 0, 0, 0, 0, 0, 0, 0])[6] if len(obj.get("pulse")) > 6 else 0,  # X6
         obj.get("pulse", [0, 0, 0, 0, 0, 0, 0, 0])[7] if len(obj.get("pulse")) > 7 else 0,  # X7
     ]
+
+    # return [] if 'None' in pulses
+    if any(v is None for v in pulses):
+        LOG.warning(f"[parser] skip {dev_eui} — pulses contain None: {pulses}")
+        return []
 
     valve_1 = obj.get("motor1")
     valve_2 = obj.get("motor2")

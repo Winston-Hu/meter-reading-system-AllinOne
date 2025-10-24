@@ -1,0 +1,176 @@
+2025-10-24 15:02:57,130 | INFO | pid=34508 tid=8385453824 | db_pool | db_pool.py:84 | Connection pool created: 2–10 connections.
+2025-10-24 15:02:57,361 | INFO | pid=34508 tid=8385453824 | catch_siteWatcher | catch_siteWatcher.py:51 | [watcher] root=/Users/jdk/github_repos/meter-reading-system-AllinOne/configs/chirpstack interval=10.0s
+2025-10-24 15:02:57,376 | INFO | pid=34508 tid=8385453824 | catch_siteWatcher | catch_siteWatcher.py:73 | [watcher] started site: Rhodes_8W_21M
+2025-10-24 15:02:57,384 | INFO | pid=34508 tid=8385453824 | catch_siteWatcher | catch_siteWatcher.py:73 | [watcher] started site: usthub_botany_mascot001
+2025-10-24 15:02:57,386 | INFO | pid=34508 tid=8385453824 | catch_siteWatcher | catch_siteWatcher.py:73 | [watcher] started site: AQM_EvergyOffice
+2025-10-24 15:02:57,562 | INFO | pid=34508 tid=6221230080 | catch_mqtt | catch_mqtt.py:110 | [AQM_EvergyOffice] connected rc=0
+2025-10-24 15:02:57,563 | INFO | pid=34508 tid=6187577344 | catch_mqtt | catch_mqtt.py:110 | [Rhodes_8W_21M] connected rc=0
+2025-10-24 15:02:57,563 | INFO | pid=34508 tid=6204403712 | catch_mqtt | catch_mqtt.py:110 | [usthub_botany_mascot001] connected rc=0
+2025-10-24 15:02:57,564 | INFO | pid=34508 tid=6221230080 | catch_mqtt | catch_mqtt.py:114 | [AQM_EvergyOffice] subscribed: application/80d9ad5e-d53a-4bed-a6b9-4d69e11feb3f/device/#
+2025-10-24 15:02:57,564 | INFO | pid=34508 tid=6187577344 | catch_mqtt | catch_mqtt.py:114 | [Rhodes_8W_21M] subscribed: application/2dbec3b3-bbc6-4674-bcc1-ef423041dad0/device/#
+2025-10-24 15:02:57,565 | INFO | pid=34508 tid=6204403712 | catch_mqtt | catch_mqtt.py:114 | [usthub_botany_mascot001] subscribed: application/2401499d-44a4-45d2-8ead-daeaf3904f80/device/#
+2025-10-24 15:02:58,688 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=0
+2025-10-24 15:02:59,163 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=1
+2025-10-24 15:02:59,681 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=2
+2025-10-24 15:03:00,160 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=3
+2025-10-24 15:03:00,643 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=4
+2025-10-24 15:03:00,880 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=5
+2025-10-24 15:03:01,120 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=5
+2025-10-24 15:03:01,359 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=6
+2025-10-24 15:03:01,599 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=6
+2025-10-24 15:03:01,840 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=7
+2025-10-24 15:03:02,081 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447e0 ch=7
+2025-10-24 15:03:03,120 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=0
+2025-10-24 15:03:03,600 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=1
+2025-10-24 15:03:04,079 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=2
+2025-10-24 15:03:04,559 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=3
+2025-10-24 15:03:05,046 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=4
+2025-10-24 15:03:05,285 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=5
+2025-10-24 15:03:05,520 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=5
+2025-10-24 15:03:05,764 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=6
+2025-10-24 15:03:06,005 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=6
+2025-10-24 15:03:06,251 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=7
+2025-10-24 15:03:06,485 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70447d8 ch=7
+2025-10-24 15:03:07,521 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=0
+2025-10-24 15:03:08,002 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=1
+2025-10-24 15:03:08,484 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=2
+2025-10-24 15:03:08,967 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=3
+2025-10-24 15:03:09,399 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=4
+2025-10-24 15:03:09,645 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=5
+2025-10-24 15:03:09,885 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=5
+2025-10-24 15:03:10,130 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=6
+2025-10-24 15:03:10,365 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=6
+2025-10-24 15:03:10,606 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=7
+2025-10-24 15:03:10,845 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18d08 ch=7
+2025-10-24 15:03:11,885 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=0
+2025-10-24 15:03:12,368 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=1
+2025-10-24 15:03:12,844 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=2
+2025-10-24 15:03:13,321 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=3
+2025-10-24 15:03:13,805 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=4
+2025-10-24 15:03:14,039 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=5
+2025-10-24 15:03:14,280 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=5
+2025-10-24 15:03:14,525 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=6
+2025-10-24 15:03:14,760 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=6
+2025-10-24 15:03:15,010 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=7
+2025-10-24 15:03:15,258 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044494 ch=7
+2025-10-24 15:03:17,570 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=0
+2025-10-24 15:03:18,040 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=1
+2025-10-24 15:03:18,531 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=2
+2025-10-24 15:03:18,966 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=3
+2025-10-24 15:03:19,402 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=4
+2025-10-24 15:03:19,640 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=5
+2025-10-24 15:03:19,885 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=5
+2025-10-24 15:03:20,120 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=6
+2025-10-24 15:03:20,360 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=6
+2025-10-24 15:03:20,603 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=7
+2025-10-24 15:03:20,846 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc19114 ch=7
+2025-10-24 15:03:26,325 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b704465c ch=0
+2025-10-24 15:03:26,800 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b704465c ch=1
+2025-10-24 15:03:27,242 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b704465c ch=2
+2025-10-24 15:03:27,720 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b704465c ch=3
+2025-10-24 15:03:28,205 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b704465c ch=4
+2025-10-24 15:03:28,447 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b704465c ch=5
+2025-10-24 15:03:28,680 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b704465c ch=5
+2025-10-24 15:03:28,921 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b704465c ch=6
+2025-10-24 15:03:29,160 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b704465c ch=6
+2025-10-24 15:03:29,405 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b704465c ch=7
+2025-10-24 15:03:29,640 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b704465c ch=7
+2025-10-24 15:03:30,679 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=0
+2025-10-24 15:03:31,152 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=1
+2025-10-24 15:03:31,645 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=2
+2025-10-24 15:03:32,120 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=3
+2025-10-24 15:03:32,600 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=4
+2025-10-24 15:03:32,806 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=5
+2025-10-24 15:03:33,044 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=5
+2025-10-24 15:03:33,284 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=6
+2025-10-24 15:03:33,521 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=6
+2025-10-24 15:03:33,760 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=7
+2025-10-24 15:03:34,005 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc191c0 ch=7
+2025-10-24 15:03:45,400 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=0
+2025-10-24 15:03:45,885 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=1
+2025-10-24 15:03:46,290 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=2
+2025-10-24 15:03:46,760 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=3
+2025-10-24 15:03:47,240 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=4
+2025-10-24 15:03:47,480 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=5
+2025-10-24 15:03:47,720 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=5
+2025-10-24 15:03:47,961 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=6
+2025-10-24 15:03:48,200 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=6
+2025-10-24 15:03:48,440 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=7
+2025-10-24 15:03:48,683 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044608 ch=7
+2025-10-24 15:03:54,331 | INFO | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=0
+2025-10-24 15:03:54,806 | INFO | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=1
+2025-10-24 15:03:55,245 | INFO | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=2
+2025-10-24 15:03:55,720 | INFO | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=3
+2025-10-24 15:03:56,200 | INFO | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=4
+2025-10-24 15:03:56,442 | WARNING | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=5
+2025-10-24 15:03:56,682 | INFO | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=5
+2025-10-24 15:03:56,880 | WARNING | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=6
+2025-10-24 15:03:56,965 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=0
+2025-10-24 15:03:57,120 | INFO | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=6
+2025-10-24 15:03:57,360 | WARNING | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=7
+2025-10-24 15:03:57,445 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=1
+2025-10-24 15:03:57,600 | INFO | pid=34508 tid=6221230080 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=7
+2025-10-24 15:03:57,920 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=2
+2025-10-24 15:03:58,405 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=3
+2025-10-24 15:03:58,866 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=4
+2025-10-24 15:03:59,130 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=5
+2025-10-24 15:03:59,336 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=5
+2025-10-24 15:03:59,578 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=6
+2025-10-24 15:03:59,800 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=6
+2025-10-24 15:04:00,040 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=7
+2025-10-24 15:04:00,285 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b70445e0 ch=7
+2025-10-24 15:04:05,245 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=0
+2025-10-24 15:04:05,720 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=1
+2025-10-24 15:04:06,201 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=2
+2025-10-24 15:04:06,683 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=3
+2025-10-24 15:04:07,160 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=4
+2025-10-24 15:04:07,401 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=5
+2025-10-24 15:04:07,600 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=5
+2025-10-24 15:04:07,837 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=6
+2025-10-24 15:04:08,085 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=6
+2025-10-24 15:04:08,321 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=7
+2025-10-24 15:04:08,565 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=78724831b7044570 ch=7
+2025-10-24 15:04:18,350 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=0
+2025-10-24 15:04:18,795 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=1
+2025-10-24 15:04:19,221 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=2
+2025-10-24 15:04:19,645 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=3
+2025-10-24 15:04:20,080 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=4
+2025-10-24 15:04:20,328 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=5
+2025-10-24 15:04:20,555 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=5
+2025-10-24 15:04:20,800 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=6
+2025-10-24 15:04:20,965 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=6
+2025-10-24 15:04:21,200 | WARNING | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=7
+2025-10-24 15:04:21,405 | INFO | pid=34508 tid=6187577344 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18fec ch=7
+2025-10-24 15:04:27,085 | INFO | pid=34546 tid=8385453824 | db_pool | db_pool.py:84 | Connection pool created: 2–10 connections.
+2025-10-24 15:04:27,332 | INFO | pid=34546 tid=8385453824 | catch_siteWatcher | catch_siteWatcher.py:51 | [watcher] root=/Users/jdk/github_repos/meter-reading-system-AllinOne/configs/chirpstack interval=10.0s
+2025-10-24 15:04:27,341 | INFO | pid=34546 tid=8385453824 | catch_siteWatcher | catch_siteWatcher.py:73 | [watcher] started site: Rhodes_8W_21M
+2025-10-24 15:04:27,348 | INFO | pid=34546 tid=8385453824 | catch_siteWatcher | catch_siteWatcher.py:73 | [watcher] started site: usthub_botany_mascot001
+2025-10-24 15:04:27,351 | INFO | pid=34546 tid=8385453824 | catch_siteWatcher | catch_siteWatcher.py:73 | [watcher] started site: AQM_EvergyOffice
+2025-10-24 15:04:27,501 | INFO | pid=34546 tid=6140948480 | catch_mqtt | catch_mqtt.py:110 | [AQM_EvergyOffice] connected rc=0
+2025-10-24 15:04:27,501 | INFO | pid=34546 tid=6107295744 | catch_mqtt | catch_mqtt.py:110 | [Rhodes_8W_21M] connected rc=0
+2025-10-24 15:04:27,502 | INFO | pid=34546 tid=6140948480 | catch_mqtt | catch_mqtt.py:114 | [AQM_EvergyOffice] subscribed: application/80d9ad5e-d53a-4bed-a6b9-4d69e11feb3f/device/#
+2025-10-24 15:04:27,502 | INFO | pid=34546 tid=6107295744 | catch_mqtt | catch_mqtt.py:114 | [Rhodes_8W_21M] subscribed: application/2dbec3b3-bbc6-4674-bcc1-ef423041dad0/device/#
+2025-10-24 15:04:27,505 | INFO | pid=34546 tid=6124122112 | catch_mqtt | catch_mqtt.py:110 | [usthub_botany_mascot001] connected rc=0
+2025-10-24 15:04:27,505 | INFO | pid=34546 tid=6124122112 | catch_mqtt | catch_mqtt.py:114 | [usthub_botany_mascot001] subscribed: application/2401499d-44a4-45d2-8ead-daeaf3904f80/device/#
+2025-10-24 15:04:41,840 | INFO | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=0
+2025-10-24 15:04:42,405 | INFO | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=1
+2025-10-24 15:04:42,855 | INFO | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=2
+2025-10-24 15:04:43,241 | INFO | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=3
+2025-10-24 15:04:43,685 | INFO | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=4
+2025-10-24 15:04:43,930 | WARNING | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=5
+2025-10-24 15:04:44,110 | INFO | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=5
+2025-10-24 15:04:44,325 | WARNING | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=6
+2025-10-24 15:04:44,525 | INFO | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=6
+2025-10-24 15:04:44,755 | WARNING | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=7
+2025-10-24 15:04:45,000 | INFO | pid=34546 tid=6107295744 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=rhodes_8w_21m dev_eui=7872f0f5bdc18f24 ch=7
+2025-10-24 15:04:53,901 | INFO | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=0
+2025-10-24 15:04:54,402 | INFO | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=1
+2025-10-24 15:04:54,880 | INFO | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=2
+2025-10-24 15:04:55,324 | INFO | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=3
+2025-10-24 15:04:55,800 | INFO | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:181 | [mapping] HIT schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=4
+2025-10-24 15:04:56,001 | WARNING | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=5
+2025-10-24 15:04:56,240 | INFO | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=5
+2025-10-24 15:04:56,485 | WARNING | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=6
+2025-10-24 15:04:56,725 | INFO | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=6
+2025-10-24 15:04:56,962 | WARNING | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:130 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=7
+2025-10-24 15:04:57,200 | INFO | pid=34546 tid=6140948480 | catch_mappingLookup | catch_mappingLookup.py:183 | [mapping] MISS schema=aqm_evergyoffice dev_eui=cacbb80330026415 ch=7
