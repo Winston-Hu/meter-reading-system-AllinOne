@@ -1,0 +1,13 @@
+2025-10-29 14:55:14,038 - INFO - rawData start:2025_10_27, end:2025_10_29
+2025-10-29 14:59:25,234 - INFO - rawData start:2025_10_27, end:2025_10_29
+2025-10-29 14:59:26,318 - INFO - Exported CSV to data_merged/merged_messages.csv | sites=['8 Walker Street, Rhodes NSW 2138', '21 Marquet Street, Rhodes NSW 2138'] | start_date=2025-10-27 | end_date=2025-10-27
+2025-10-29 14:59:26,319 - INFO - files have been merged to data_merged/merged_messages.csv
+2025-10-29 15:13:29,137 - INFO - rawData start:2025_10_27, end:2025_10_29
+2025-10-29 15:13:58,168 - INFO - Exported CSV to data_merged/merged_messages.csv | sites=['8 Walker Street, Rhodes NSW 2138', '21 Marquet Street, Rhodes NSW 2138'] | start_date=2025-10-27 | end_date=2025-10-29
+2025-10-29 15:13:58,174 - INFO - files have been merged to data_merged/merged_messages.csv
+2025-10-29 15:46:46,305 - INFO - rawData start:2025_10_26, end:2025_10_29
+2025-10-29 15:47:33,666 - INFO - Exported CSV to data_merged/merged_messages.csv | sites=['8 Walker Street, Rhodes NSW 2138', '21 Marquet Street, Rhodes NSW 2138'] | start_date=2025-10-26T00:00:00 | end_date=2025-10-30T00:00:00
+2025-10-29 15:47:33,668 - INFO - files have been merged to data_merged/merged_messages.csv
+2025-10-29 15:54:15,766 - INFO - rawData start:2025_10_26, end:2025_10_29
+2025-10-29 15:55:11,069 - INFO - Exported CSV to data_merged/merged_messages.csv | sites=['8 Walker Street, Rhodes NSW 2138', '21 Marquet Street, Rhodes NSW 2138'] | start=2025-10-26T00:00:00 | end=2025-10-30T00:00:00
+2025-10-29 15:55:11,073 - INFO - files have been merged to data_merged/merged_messages.csv
