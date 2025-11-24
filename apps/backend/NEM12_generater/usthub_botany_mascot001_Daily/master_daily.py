@@ -75,12 +75,12 @@ def master_main():
     logging.info("Starting execution of master workflow...")
 
     steps = [
-        # ("step1_db_to_csv", step1_main),
-        # ("step2_get_processed_data", step2_main),
-        # ("step3_get_NMI12_ori", step3_main),
-        # ("step4_get_all300_andTiggerDate", step4_main),
-        # ("step5_multiple300_clear610", step5_main),
-        # ("step6_clear610and710", step6_main),
+        ("step1_db_to_csv", step1_main),
+        ("step2_get_processed_data", step2_main),
+        ("step3_get_NMI12_ori", step3_main),
+        ("step4_get_all300_andTiggerDate", step4_main),
+        ("step5_multiple300_clear610", step5_main),
+        ("step6_clear610and710", step6_main),
         ("step7_SendEmail", step7_send_email_with_attachment)
     ]
 
@@ -113,7 +113,7 @@ if __name__ == "__main__":
     try:
         while True:
             current_time = datetime.now()
-            next_run = current_time.replace(hour=9, minute=0, second=0, microsecond=0)
+            next_run = current_time.replace(hour=13, minute=13, second=0, microsecond=0)
 
             # If the current time is past 8 o'clock today, set it to 8 o'clock tomorrow
             if current_time >= next_run:
